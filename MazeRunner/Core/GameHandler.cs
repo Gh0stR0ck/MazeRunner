@@ -48,7 +48,6 @@ namespace MazeRunner.Core
         {
             foreach (var maze in ListMazes)
             {
-                if (maze.Name == "Example Maze") continue;
                 Message.Write($"[{maze.Name}] has a potential reward of [{maze.PotentialReward}] and contains [{maze.TotalTiles}] tiles;");
                 
                 var possibleActions = await EnterMaze(maze.Name);

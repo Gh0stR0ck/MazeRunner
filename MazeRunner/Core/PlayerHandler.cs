@@ -57,10 +57,12 @@ namespace MazeRunner.Core
                 }
 
                 // We should stop exploring when we got all the coins in the maze. This doesn't work on the Example Maze.
+                /*
                 if (possibleActionsAndCurrentScore.CurrentScoreInHand == potentialReward && MazeHandler.GetClosestNodeForCollectingCoins() != null)
                 {
                     MazeHandler.Goal = "Coins";
                 }
+                */
 
                 // Should we leave the maze?
                 if (MazeHandler.Goal == "Coins" && possibleActionsAndCurrentScore.CanCollectScoreHere.GetValueOrDefault() && possibleActionsAndCurrentScore.CurrentScoreInHand > 0)

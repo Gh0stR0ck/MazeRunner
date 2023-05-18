@@ -1,10 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace MazeRunner.Model
+namespace MazeRunner.Entity
 {
+    /// <summary>
+    /// The Node that is every possible position in the maze.
+    /// </summary>
     public class Node
     {
+        // Data for the game itself.
         public int X;
         public int Y;
         public bool IsStart;
@@ -12,10 +15,11 @@ namespace MazeRunner.Model
         public bool AllowsScoreCollection;
         public bool AllowsExit;
 
-        public int Cost { get; set; }
-        public int Heuristic { get; set; }
+        // Data for the Algorithm
+        public int Cost;
+        public int Heuristic;
         public int TotalCost => Cost + Heuristic;
-        public Node Parent { get; set; }
-        public List<string> Neighbors { get; set; }
+        public Node Parent;
+        public List<string> Neighbors;
     }
 }
